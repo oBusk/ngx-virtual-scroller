@@ -21,12 +21,9 @@
   },
   "ngPackage": {
     "lib": {
-      "entryFile": "src/virtual-scroller.ts",
-      "umdModuleIds": {
-        "@tweenjs/tween.js": "TWEEN"
-      }
+      "entryFile": "src/virtual-scroller.ts"
     },
-    "whitelistedNonPeerDependencies": [
+    "allowedNonPeerDependencies": [
       "@tweenjs/tween.js",
       "@types/tween.js"
     ]
