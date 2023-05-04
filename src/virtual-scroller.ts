@@ -620,7 +620,7 @@ export class VirtualScrollerComponent implements OnInit, OnChanges, OnDestroy {
 		this.resetWrapGroupDimensions();
 	}
 
-	protected getElementSize(element: HTMLElement) : ClientRect {
+	protected getElementSize(element: HTMLElement) {
 		let result = element.getBoundingClientRect();
 		let styles = getComputedStyle(element);
 		let marginTop = parseInt(styles['margin-top'], 10) || 0;
@@ -638,7 +638,7 @@ export class VirtualScrollerComponent implements OnInit, OnChanges, OnDestroy {
 		};
 	}
 
-	protected previousScrollBoundingRect: ClientRect;
+	protected previousScrollBoundingRect: {top: number, bottom: number, left: number, right: number, width: number, height: number};
 	protected checkScrollElementResized(): void {
 		let boundingRect = this.getElementSize(this.getScrollElement());
 
